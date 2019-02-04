@@ -3,10 +3,7 @@ package recruitment.domain;
 import javax.persistence.*;
 
 import java.math.BigDecimal;
-// KEKE was here
-//and nhedi
-// and memedov
-// cha cha
+//nathalie was here
 @Entity
 @Table(name = "COMPETENCE_PROFILE")
 public class CompetenceProfile{
