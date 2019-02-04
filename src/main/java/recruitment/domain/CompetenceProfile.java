@@ -3,7 +3,7 @@ package recruitment.domain;
 import javax.persistence.*;
 
 import java.math.BigDecimal;
-
+// KEKE was here
 @Entity
 @Table(name = "COMPETENCE_PROFILE")
 public class CompetenceProfile{
