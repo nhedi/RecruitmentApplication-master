@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 import java.math.BigDecimal;
 // KEKE was here
+//and nhedi
 @Entity
 @Table(name = "COMPETENCE_PROFILE")
 public class CompetenceProfile{
