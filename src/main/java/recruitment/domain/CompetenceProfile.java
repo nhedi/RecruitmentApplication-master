@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 // KEKE was here
 //and nhedi
 // and memedov
+// che
 @Entity
 @Table(name = "COMPETENCE_PROFILE")
 public class CompetenceProfile{
