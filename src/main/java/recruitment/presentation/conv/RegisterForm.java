@@ -5,29 +5,37 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 class RegisterForm {
 
+    @NotEmpty
     @NotBlank(message = "First name may not be blank.")
     private String fname;
 
+    @NotEmpty
     @NotBlank(message = "Last name may not be blank.")
     private String lname;
 
+    @NotEmpty
     @Email(message = "Please submit a valid email address.")
     @NotBlank(message = "Please fill in your email address.")
     private String email;
 
     @DateTimeFormat(pattern = "YY/MM/DD")
+    @NotEmpty
     @NotBlank(message = "Social security number may not be blank.")
     private String ssn;
 
+    @NotEmpty
     @NotBlank(message = "Please choose a username.")
     private String username;
 
+    @NotEmpty
     @NotBlank(message = "Please choose a password.")
     private String password;
 
+    @NotEmpty
     @NotBlank(message = "Please confirm your password.")
     private String confirmPwd;
 
@@ -36,13 +44,9 @@ class RegisterForm {
     private String conversionResult;
     private int totalCount;
 
-    public String getFname() {
-        return fname;
-    }
+    public String getFname() { return fname; }
 
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
+    public void setFname(String fname) { this.fname = fname; }
 
     public String getLname() {
         return lname;

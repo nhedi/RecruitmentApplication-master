@@ -15,15 +15,13 @@ public class RecruiterService {
     private RecruiterRepository recruiterRepo;
 
     public String findRole(int id) {
-        return recruiterRepo.findRoleById(1);
+        return recruiterRepo.findRoleById(id);
     }
 
-    public String findName(int id){
-        return recruiterRepo.findNameById(id);
-    }
+    public String findName(int id){ return recruiterRepo.findNameById(id); }
 
     public String findCompetence(int id){
-        return recruiterRepo.findCompetenceById(2);
+        return recruiterRepo.findCompetenceById(id);
     }
 
     public String findAvailabilityByPid(int pid){
@@ -34,13 +32,9 @@ public class RecruiterService {
         return recruiterRepo.getExperienceByPid(pid);
     }
 
-    public boolean checkUsername(String username) {
-        return recruiterRepo.checkUsername(username);
-    }
+    public boolean checkUsername(String username) { return recruiterRepo.checkUsername(username); }
 
-    public boolean checkEmail(String email) {
-        return recruiterRepo.checkEmail(email);
-    }
+    public boolean checkEmail(String email) { return recruiterRepo.checkEmail(email); }
 
     public boolean checkSsn(String ssn) {
         return recruiterRepo.checkSsn(ssn);
