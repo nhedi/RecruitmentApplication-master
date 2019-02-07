@@ -22,7 +22,7 @@
             <p th:if="${#fields.hasErrors('lname')}" th:errors="*{lname}">Lname Error</p>
             <br><br>
             Email:<br>
-            <input type="text" th:field="*{email}">
+            <input type="email" th:field="*{email}">
             <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</p>
             <br><br>
             Social security number:<br>
@@ -34,11 +34,11 @@
             <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</p>
             <br><br>
             Password:<br>
-            <input type="text" th:field="*{password}">
+            <input type="password" th:field="*{password}">
             <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</p>
             <br><br>
             Confirm password:<br>
-            <input type="text" th:field="*{confirmPwd}">
+            <input type="password" th:field="*{confirmPwd}">
             <p th:if="${#fields.hasErrors('confirmPwd')}" th:errors="*{confirmPwd}">Confirm Password Error</p>
             <br><br>
             <input type="submit" value="Register">
