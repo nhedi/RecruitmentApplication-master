@@ -19,7 +19,7 @@ import recruitment.application.RecruiterService;
 public class RecruiterController {
     static final String DEFAULT_PAGE_URL = "/";
     static final String REGISTER_PAGE_URL = "register";
-    static final String UPDATE_RATE_URL = "update-rate";
+    static final String LOGIN_PAGE_URL = "login";
 
     private static final String CURRENT_REG_OBJ_NAME = "currentRegistration";
     private static final String REGISTER_FORM_OBJ_NAME = "registerForm";
@@ -47,6 +47,7 @@ public class RecruiterController {
         return REGISTER_PAGE_URL;
     }
 
+    @Valid
     @PostMapping("/" + REGISTER_PAGE_URL)
     public String findExchangeRate(@Valid RegisterForm registerForm, BindingResult bindingResult, Model model) {
 
@@ -57,35 +58,36 @@ public class RecruiterController {
 //    System.out.println(service.findAvailabilityByPid(2));
 //    System.out.println(service.getExperienceByPid(2) + " ");
 
-    boolean result = true;
+            if (!registerForm.getPassword().equals(registerForm.getConfirmPwd())) {
+                bindingResult.rejectValue("confirmPwd", null, "Passwords do not match, try again.");
 
-    if(registerForm.getPassword().equals(registerForm.getConfirmPwd())) {
-        if(service.checkUsername(registerForm.getUsername()) == true) {
-            bindingResult.rejectValue("username", null, "There is already an accound registred with that username");
-            result = false;
-        }
-        if(service.checkEmail(registerForm.getEmail()) == true) {
-            bindingResult.rejectValue("email", null, "There is already an accound registred with that email");
-            result = false;
-        }
-        if(service.checkSsn(registerForm.getSsn()) == true) {
-            bindingResult.rejectValue("ssn", null, "There is already an accound registreed with that social security number");
-            result = false;
-        }
-        if(result) {
+                return REGISTER_PAGE_URL;
+            } else {
+
             System.out.println("passed all tests");
+
             service.registerUser(registerForm.getFname(), registerForm.getLname(), registerForm.getEmail(),
                     registerForm.getSsn(), registerForm.getUsername(), registerForm.getPassword());
         }
         }
         //System.out.println(service.findName(3));
 
+            System.out.println("***************************");
+            return LOGIN_PAGE_URL;
+            }
 
+            if (service.checkUsername(registerForm.getUsername()) == true) {
+                bindingResult.rejectValue("email", null, "There is already an account registered with that email");
+            }
+            if (service.checkSsn(registerForm.getSsn()) == true) {
+                bindingResult.rejectValue("ssn", null, "There is already an account registered with that social security number");
+            }
+            if (!registerForm.getPassword().equals(registerForm.getConfirmPwd())) {
+                bindingResult.rejectValue("confirmPwd", null, "Passwords do not match, try again.");
+            }
 
-//        if (bindingResult.hasErrors()) {
-//            model.addAttribute(REGISTER_FORM_OBJ_NAME, new RegisterForm());
-//            return REGISTER_PAGE_URL;
-//        }
+            return REGISTER_PAGE_URL;
+        }
 //        String from = registerForm.getFrom();
 //        int amount = registerForm.getNumber();
 //
@@ -105,25 +107,25 @@ public class RecruiterController {
         return showConversionResultPage(model);
     }
 
-    @GetMapping("/" + UPDATE_RATE_URL)
+    @GetMapping("/" + LOGIN_PAGE_URL)
     public String showUpdateRateView(RegisterForm registerForm) {
 //        int count = service.countSum();
 //        registerForm.setTotalCount(count);
-        return UPDATE_RATE_URL;
+        return LOGIN_PAGE_URL;
     }
 
     private String showUpdateRateResultPage(Model model) {
 //        if (currentConv != null) {
 //            model.addAttribute(CURRENT_REG_OBJ_NAME, currentConv);
 //        }
-        return UPDATE_RATE_URL;
+        return LOGIN_PAGE_URL;
     }
 
-    @PostMapping("/" + UPDATE_RATE_URL)
+    @PostMapping("/" + LOGIN_PAGE_URL)
     public String setExchangeRate(@Valid RegisterForm registerForm, BindingResult bindingResult, Model model) {
 //        if (bindingResult.hasErrors()) {
 //            model.addAttribute(CURRENT_REG_OBJ_NAME, new RegisterForm());
-//            return UPDATE_RATE_URL;
+//            return LOGIN_PAGE_URL;
 //        }
 //
 //        String from = registerForm.getFrom();

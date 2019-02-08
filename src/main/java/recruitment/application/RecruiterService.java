@@ -34,13 +34,9 @@ public class RecruiterService {
 //        return recruiterRepo.getExperienceByPid(pid);
 //    }
 
-    public boolean checkUsername(String username) {
-        return recruiterRepo.checkUsername(username);
-    }
+    public boolean checkUsername(String username) { return recruiterRepo.checkUsername(username); }
 
-    public boolean checkEmail(String email) {
-        return recruiterRepo.checkEmail(email);
-    }
+    public boolean checkEmail(String email) { return recruiterRepo.checkEmail(email); }
 
     public boolean checkSsn(String ssn) {
         return recruiterRepo.checkSsn(ssn);
