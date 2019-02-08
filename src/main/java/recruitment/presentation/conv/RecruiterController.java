@@ -50,12 +50,12 @@ public class RecruiterController {
     @PostMapping("/" + REGISTER_PAGE_URL)
     public String findExchangeRate(@Valid RegisterForm registerForm, BindingResult bindingResult, Model model) {
 
-    System.out.println(service.findRole(1));
-    System.out.println(service.findName(2));
-
-    System.out.println(service.findCompetence(2));
-    System.out.println(service.findAvailabilityByPid(2));
-    System.out.println(service.getExperienceByPid(2) + " ");
+//    System.out.println(service.findRole(1));
+//    System.out.println(service.findName(2));
+//
+//    System.out.println(service.findCompetence(2));
+//    System.out.println(service.findAvailabilityByPid(2));
+//    System.out.println(service.getExperienceByPid(2) + " ");
 
     boolean result = true;
 
@@ -78,7 +78,7 @@ public class RecruiterController {
                     registerForm.getSsn(), registerForm.getUsername(), registerForm.getPassword());
         }
         }
-        System.out.println(service.findName(3));
+        //System.out.println(service.findName(3));
 
 
 

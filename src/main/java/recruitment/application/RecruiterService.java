@@ -14,25 +14,25 @@ public class RecruiterService {
     @Autowired
     private RecruiterRepository recruiterRepo;
 
-    public String findRole(int id) {
-        return recruiterRepo.findRoleById(1);
-    }
-
-    public String findName(int id){
-        return recruiterRepo.findNameById(id);
-    }
-
-    public String findCompetence(int id){
-        return recruiterRepo.findCompetenceById(2);
-    }
-
-    public String findAvailabilityByPid(int pid){
-        return recruiterRepo.findAvailabilityByPid(pid).toString();
-    }
-
-    public BigDecimal getExperienceByPid(int pid){
-        return recruiterRepo.getExperienceByPid(pid);
-    }
+//    public String findRole(int id) {
+//        return recruiterRepo.findRoleById(1);
+//    }
+//
+//    public String findName(int id){
+//        return recruiterRepo.findNameById(id);
+//    }
+//
+//    public String findCompetence(int id){
+//        return recruiterRepo.findCompetenceById(2);
+//    }
+//
+//    public String findAvailabilityByPid(int pid){
+//        return recruiterRepo.findAvailabilityByPid(pid).toString();
+//    }
+//
+//    public BigDecimal getExperienceByPid(int pid){
+//        return recruiterRepo.getExperienceByPid(pid);
+//    }
 
     public boolean checkUsername(String username) {
         return recruiterRepo.checkUsername(username);
