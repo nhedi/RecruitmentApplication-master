@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac9ff38e-cc4e-4147-bc39-512245f573c7" name="Default Changelist" comment="" />
+    <list default="true" id="ac9ff38e-cc4e-4147-bc39-512245f573c7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/web-root/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/web-root/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/presentation/conv/RecruiterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/presentation/conv/RecruiterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/web-root/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web-root/register.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +127,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/web-root/resources/fragments/header.html" />
         <option value="$PROJECT_DIR$/src/main/resources/web-root/resources/css/conversion.css" />
         <option value="$PROJECT_DIR$/src/main/resources/web-root/login.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/web-root/register.html" />
         <option value="$PROJECT_DIR$/src/main/java/converter/presentation/conv/RegisterForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/converter/presentation/conv/RecruiterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/recruitment/domain/PersonDTO.java" />
@@ -131,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/main/java/recruitment/presentation/conv/RegisterForm.java" />
         <option value="$PROJECT_DIR$/src/main/resources/web-root/resources/fragments/heading.html" />
         <option value="$PROJECT_DIR$/src/main/java/recruitment/presentation/conv/RecruiterController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/web-root/register.html" />
       </list>
     </option>
   </component>
@@ -145,8 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,6 +314,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -596,7 +602,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/recruitment/application/RecruiterService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/web-root/resources/fragments/heading.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
