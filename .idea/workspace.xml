@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac9ff38e-cc4e-4147-bc39-512245f573c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recruitment/application/RecruiterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recruitment/application/RecruiterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recruitment/domain/CompetenceProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recruitment/domain/CompetenceProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recruitment/presentation/conv/RecruiterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recruitment/presentation/conv/RecruiterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recruitment/presentation/conv/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recruitment/presentation/conv/RegisterForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/web-root/resources/css/conversion.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/web-root/resources/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/web-root/resources/fragments/heading.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/web-root/resources/fragments/heading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/web-root/update-rate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/web-root/login-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/application/RecruiterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/application/RecruiterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/config/CurrencyConverterConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/config/CurrencyConverterConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/domain/Availability.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/domain/Availability.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/domain/BeanFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/domain/BeanFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/domain/Competence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/domain/Competence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/domain/CompetenceProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/domain/CompetenceProfile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/domain/IllegalConversionException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/domain/IllegalConversionException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/domain/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/domain/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/domain/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/domain/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/presentation/conv/RecruiterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/presentation/conv/RecruiterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/presentation/conv/RegisterForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/presentation/conv/RegisterForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/presentation/error/ExceptionHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/presentation/error/ExceptionHandlers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/repository/RecruiterRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/repository/RecruiterRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/recruitment/util/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/recruitment/util/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web-root/resources/css/conversion.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web-root/resources/fragments/heading.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/web-root/resources/fragments/heading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/web-root/update-rate.html" beforeDir="false" />
-    </list>
+    <list default="true" id="ac9ff38e-cc4e-4147-bc39-512245f573c7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +134,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="513" />
     <option name="width" value="1422" />
     <option name="height" value="795" />
@@ -347,7 +319,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549552518182" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549552549422" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -391,16 +363,15 @@
       <updated>1548928619548</updated>
       <workItem from="1548928620786" duration="28804000" />
       <workItem from="1549282514442" duration="9873000" />
-      <workItem from="1549549631390" duration="2717000" />
+      <workItem from="1549549631390" duration="3019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41394000" />
+    <option name="totallyTimeSpent" value="41696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18704453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -412,13 +383,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3179396" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3179396" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32905984" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
