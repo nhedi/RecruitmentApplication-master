@@ -1,4 +1,3 @@
-
 package recruitment.domain;
 
 import org.springframework.context.ApplicationContext;

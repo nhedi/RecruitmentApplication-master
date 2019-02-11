@@ -14,11 +14,7 @@ import java.math.*;
 @Transactional(propagation = Propagation.MANDATORY)
 public interface RecruiterRepository extends JpaRepository<Role, String> {
 
-//    @Modifying
-//    @Query(value = "UPDATE CONVERSION SET CON_COUNT = ? WHERE CON_FROMTO= ?", nativeQuery = true)
-//    void setNewCount(int count, String fromto);
-//
-      @Query(value = "SELECT NAME FROM ROLE WHERE ROLE_ID = 1", nativeQuery = true)
+    @Query(value = "SELECT NAME FROM ROLE WHERE ROLE_ID = 1", nativeQuery = true)
       String findRoleById(int id);
 
     @Query(value = "SELECT NAME FROM PERSON WHERE PERSON_ID = ?", nativeQuery = true)
@@ -47,12 +43,4 @@ public interface RecruiterRepository extends JpaRepository<Role, String> {
     @Query(value = "INSERT INTO PERSON (NAME, SURNAME, SSN, EMAIL, PASSWORD, ROLE_ID, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?)", nativeQuery = true)
     void registerUser (String fname, String lname, String ssn, String email, String password, int roleId, String username);
 
-
-//
-//    @Modifying
-//    @Query(value = "UPDATE CONVERSION SET CON_RATE = ? WHERE CON_FROMTO= ?", nativeQuery = true)
-//    void setNewRate(double rate, String fromto);
-//
-//    @Query(value = "insert into", nativeQuery = true)
-//    int countSum();
 }

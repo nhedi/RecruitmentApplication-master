@@ -43,17 +43,4 @@ public class RecruiterService {
     public void registerUser(String fname, String lname, String email, String ssn, String username, String password) {
         recruiterRepo.registerUser(fname, lname, ssn, email, password, 2, username);
     }
-
-
-//    public void setNewRate(double value, String fromto) {
-//        recruiterRepo.setNewRate(value, fromto);
-//    }
-//
-//    public void setNewCount(int count, String fromto) {
-//        recruiterRepo.setNewCount(count, fromto);
-//    }
-//
-//    public int countSum() {
-//        return recruiterRepo.countSum();
-//    }
 }
