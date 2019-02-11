@@ -1,8 +1,8 @@
 package recruitment.domain;
 
 import javax.persistence.*;
-
 import java.math.BigDecimal;
+
 @Entity
 @Table(name = "COMPETENCE_PROFILE")
 public class CompetenceProfile{

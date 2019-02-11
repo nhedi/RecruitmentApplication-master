@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import recruitment.domain.IllegalConversionException;
+import recruitment.domain.IllegalRegisterException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
@@ -32,9 +32,9 @@ public class ExceptionHandlers implements ErrorController {
     static final String ERROR_PATH = "failure";
 
 
-    @ExceptionHandler(IllegalConversionException.class)
+    @ExceptionHandler(IllegalRegisterException.class)
     @ResponseStatus(HttpStatus.OK)
-    public String handleException(IllegalConversionException exception, Model model) {
+    public String handleException(IllegalRegisterException exception, Model model) {
         model.addAttribute(ERROR_TYPE_KEY, GENERIC_ERROR);
         model.addAttribute(ERROR_INFO_KEY, GENERIC_ERROR_INFO);
         return ERROR_PAGE_URL;
