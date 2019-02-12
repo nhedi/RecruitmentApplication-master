@@ -7,11 +7,11 @@ import javax.validation.constraints.NotEmpty;
 class LoginForm {
 
     @NotEmpty
-    @NotBlank(message = "Please choose a username.")
+    @NotBlank(message = "Please submit your username.")
     private String username;
 
     @NotEmpty
-    @NotBlank(message = "Please choose a password.")
+    @NotBlank(message = "Please submit your password.")
     private String password;
 
     public String getUsername() {
