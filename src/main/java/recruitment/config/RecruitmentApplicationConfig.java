@@ -19,7 +19,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 @EnableTransactionManagement
 @EnableWebMvc
 @Configuration
-public class CurrencyConverterConfig implements WebMvcConfigurer, ApplicationContextAware {
+public class RecruitmentApplicationConfig implements WebMvcConfigurer, ApplicationContextAware {
     private ApplicationContext applicationContext;
 
     @Override
@@ -36,7 +36,7 @@ public class CurrencyConverterConfig implements WebMvcConfigurer, ApplicationCon
         return viewResolver;
     }
 
-    @Bean(name = "currencyCoverterTemplateEngine")
+    @Bean(name = "recruitmentApplicationTemplateEngine")
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());

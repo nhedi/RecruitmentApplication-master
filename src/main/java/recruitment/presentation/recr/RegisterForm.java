@@ -1,4 +1,4 @@
-package recruitment.presentation.conv;
+package recruitment.presentation.recr;
 
 import recruitment.util.Util;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -95,20 +95,7 @@ class RegisterForm {
     public void setConfirmPwd(String confirmPwd) {
         this.confirmPwd = confirmPwd;
     }
-
-
-    public int getTotalCount() { return totalCount; }
-
-    public void setTotalCount(int count) {this.totalCount = count; }
-
-    public void setConversionResult(double conversionResult) {
-        this.conversionResult = conversionResult + " " + this.to;
-    }
-
-    public String getConversionResult() {
-        return conversionResult;
-    }
-
+    
     @Override
     public String toString() {
         return Util.toString(this);
