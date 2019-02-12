@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.validation.Valid;
 
 import recruitment.application.RecruiterService;
+import sun.rmi.runtime.Log;
 //import recruitment.domain.PersonDTO;
 
 
@@ -24,6 +25,7 @@ public class RecruiterController {
 
     private static final String CURRENT_REG_OBJ_NAME = "currentRegistration";
     private static final String REGISTER_FORM_OBJ_NAME = "registerForm";
+    private static final String LOGIN_FORM_OBJ_NAME = "loginForm";
 
 
     @Autowired
@@ -41,9 +43,15 @@ public class RecruiterController {
     }
 
     @GetMapping("/" + LOGIN_PAGE_URL)
-    public String showLoginPageView(LoginForm loginForm) { return LOGIN_PAGE_URL; }
+    public String showLoginPageView(Model model) { return showLoginPage(model, new LoginForm()); }
 
-    @Valid
+    private String showLoginPage(Model model, LoginForm loginForm) {
+        if(loginForm != null) {
+            model.addAttribute(LOGIN_FORM_OBJ_NAME, loginForm);
+        }
+        return LOGIN_PAGE_URL;
+    }
+
     @PostMapping("/" + REGISTER_PAGE_URL)
     public String sendRegistration(@Valid RegisterForm registerForm, BindingResult bindingResult, Model model) {
         if(!bindingResult.hasErrors()) {
@@ -64,8 +72,10 @@ public class RecruiterController {
 
                 System.out.println("***************************");
                 System.out.println(service.findName(3));
+                LoginForm loginForm = new LoginForm();
+                loginForm.setUsername(registerForm.getUsername());
 
-                return showLoginPageView(null);
+                return showLoginPage(model, loginForm);
             }
 
         } else {
@@ -87,9 +97,15 @@ public class RecruiterController {
         return REGISTER_PAGE_URL;
     }
 
-    @Valid
     @PostMapping("/" + LOGIN_PAGE_URL)
     public String sendLogin(@Valid LoginForm loginForm, BindingResult bindingResult, Model model) {
+        if(!bindingResult.hasErrors()) {
+            //kolla i databasen om användarnamn och lösenord matchar
+        } else {
+            if (service.checkUsername(loginForm.getUsername()) == false) {
+                bindingResult.rejectValue("username", null, "There is no such username.");
+            }
+        }
 //        if (bindingResult.hasErrors()) {
 //            model.addAttribute(CURRENT_REG_OBJ_NAME, new RegisterForm());
 //            return LOGIN_PAGE_URL;
