@@ -48,11 +48,11 @@ public class RecruiterController {
     public String sendRegistration(@Valid RegisterForm registerForm, BindingResult bindingResult, Model model) {
         if(!bindingResult.hasErrors()) {
 
-            System.out.println(service.findRole(1));
-            System.out.println(service.findName(2));
-            System.out.println(service.findCompetence(2));
-            System.out.println(service.findAvailabilityByPid(2));
-            System.out.println(service.getExperienceByPid(2) + " ");
+//            System.out.println(service.findRole(1));
+//            System.out.println(service.findName(2));
+//            System.out.println(service.findCompetence(2));
+//            System.out.println(service.findAvailabilityByPid(2));
+//            System.out.println(service.getExperienceByPid(2) + " ");
 
             if (!registerForm.getPassword().equals(registerForm.getConfirmPwd())) {
                 bindingResult.rejectValue("confirmPwd", null, "Passwords do not match, try again.");
@@ -63,7 +63,7 @@ public class RecruiterController {
                             registerForm.getSsn(), registerForm.getUsername(), registerForm.getPassword());
 
                 System.out.println("***************************");
-                System.out.println(service.findName(3));
+//                System.out.println(service.findName(3));
 
                 return showLoginPageView(null);
             }
