@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.validation.Valid;
 
 import recruitment.application.RecruiterService;
-import sun.rmi.runtime.Log;
 //import recruitment.domain.PersonDTO;
 
 
@@ -21,7 +20,8 @@ public class RecruiterController {
     static final String DEFAULT_PAGE_URL = "/";
     static final String REGISTER_PAGE_URL = "register";
     static final String LOGIN_PAGE_URL = "login";
-    static final String REDIRECT_LOGIN_PAGE_URL = "redirect-login";
+    static final String APPLY_PAGE_URL = "apply";
+    static final String LIST_APPLICATIONS_PAGE_URL = "list-applications";
 
     private static final String CURRENT_REG_OBJ_NAME = "currentRegistration";
     private static final String REGISTER_FORM_OBJ_NAME = "registerForm";
@@ -50,6 +50,16 @@ public class RecruiterController {
             model.addAttribute(LOGIN_FORM_OBJ_NAME, loginForm);
         }
         return LOGIN_PAGE_URL;
+    }
+
+    @GetMapping("/" + APPLY_PAGE_URL)
+    public String showApplyPageView(LoginForm loginForm) {
+        return APPLY_PAGE_URL;
+    }
+
+    @GetMapping("/" + LIST_APPLICATIONS_PAGE_URL)
+    public String showListApplicationsPageView(LoginForm loginForm) {
+        return LIST_APPLICATIONS_PAGE_URL;
     }
 
     @PostMapping("/" + REGISTER_PAGE_URL)
@@ -100,12 +110,19 @@ public class RecruiterController {
     @PostMapping("/" + LOGIN_PAGE_URL)
     public String sendLogin(@Valid LoginForm loginForm, BindingResult bindingResult, Model model) {
         if(!bindingResult.hasErrors()) {
-            //kolla i databasen om användarnamn och lösenord matchar
-        } else {
-            if (service.checkUsername(loginForm.getUsername()) == false) {
-                bindingResult.rejectValue("username", null, "There is no such username.");
+            //If an applicant logs in
+            if(service.authorize(loginForm.getUsername(), loginForm.getPassword()) == 2) {
+                return APPLY_PAGE_URL;
             }
-        }
+            //If a recruiter logs in
+            else if(service.authorize(loginForm.getUsername(), loginForm.getPassword()) == 1) {
+                return LIST_APPLICATIONS_PAGE_URL;
+            }
+        } /*else {
+            if (service.checkUsername(loginForm.getUsername()) == false) {
+                bindingResult.rejectValue("username", null, "Username or password is incorrect.");
+            }
+        }*/
 //        if (bindingResult.hasErrors()) {
 //            model.addAttribute(CURRENT_REG_OBJ_NAME, new RegisterForm());
 //            return LOGIN_PAGE_URL;
@@ -128,3 +145,4 @@ public class RecruiterController {
     }
 
 }
+

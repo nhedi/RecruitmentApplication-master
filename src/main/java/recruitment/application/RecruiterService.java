@@ -43,4 +43,8 @@ public class RecruiterService {
     public void registerUser(String fname, String lname, String email, String ssn, String username, String password) {
         recruiterRepo.registerUser(fname, lname, ssn, email, password, 2, username);
     }
+
+    public int authorize(String username, String password) {
+        return recruiterRepo.authorize(username, password);
+    }
 }
