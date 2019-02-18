@@ -35,6 +35,7 @@ public class Person implements PersonDTO {
     @Column(name = "ROLE_ID")
     private int roleId;
 
+
     public Person(int personId, String name, String surname, String ssn, String email,
                   String username, String password, int roleId) {
         this.personId = personId;
@@ -58,6 +59,11 @@ public class Person implements PersonDTO {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
     }
 }
 
