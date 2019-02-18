@@ -11,7 +11,7 @@ public class Person implements PersonDTO {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE_NAME_KEY)
     @SequenceGenerator(name = SEQUENCE_NAME_KEY, sequenceName = "PERSON_SEQUENCE")
 
-    @Column(name = "PERSON_ID", columnDefinition = "identity")
+    @Column(name = "PERSON_ID")
     private int personId;
 
     @Column(name = "NAME")

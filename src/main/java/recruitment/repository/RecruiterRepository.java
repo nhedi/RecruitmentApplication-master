@@ -43,4 +43,6 @@ public interface RecruiterRepository extends JpaRepository<Role, String> {
     @Query(value = "INSERT INTO PERSON (NAME, SURNAME, SSN, EMAIL, PASSWORD, ROLE_ID, USERNAME) VALUES (?, ?, ?, ?, ?, ?, ?)", nativeQuery = true)
     void registerUser (String fname, String lname, String ssn, String email, String password, int roleId, String username);
 
+    @Query(value = "SELECT ROLE_ID FROM PERSON WHERE USERNAME = ? AND PASSWORD = ?", nativeQuery = true)
+    int authorize(String username, String password);
 }

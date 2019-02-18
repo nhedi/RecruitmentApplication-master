@@ -1,13 +1,13 @@
-DROP TABLE IF EXISTS `ROLE`;
-DROP TABLE IF EXISTS `PERSON`;
-DROP TABLE IF EXISTS `AVAILABILITY`;
-DROP TABLE IF EXISTS `COMPETENCE`;
-DROP TABLE IF EXISTS `COMPETENCE_PROFILE`;
+DROP TABLE IF EXISTS ROLE;
+DROP TABLE IF EXISTS PERSON;
+DROP TABLE IF EXISTS AVAILABILITY;
+DROP TABLE IF EXISTS COMPETENCE;
+DROP TABLE IF EXISTS COMPETENCE_PROFILE;
 
 --
 -- Create for table `ROLE
 --
-CREATE TABLE `ROLE` (
+CREATE TABLE ROLE (
                     `ROLE_ID` BIGINT PRIMARY KEY,
                     `NAME` VARCHAR(255) NOT NULL
 );
@@ -16,21 +16,21 @@ CREATE TABLE `ROLE` (
 --
 -- Create for table `PERSON`
 --
-CREATE TABLE `PERSON` (
-                      person_id IDENTITY(3, 1) PRIMARY KEY,
+CREATE TABLE PERSON (
+                      person_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
                       name VARCHAR(255) NOT NULL,
                       surname VARCHAR(255) NOT NULL,
                       ssn VARCHAR(255),
                       email VARCHAR(255),
                       password VARCHAR(255) NOT NULL,
                       role_id BIGINT REFERENCES role NOT NULL,
-                      username VARCHAR(255) NOT NULL UNIQUE,
+                      username VARCHAR(255) NOT NULL UNIQUE
 );
 
 --
 -- Create for table `AVAILABILITY`
 --
-CREATE TABLE `AVAILABILITY` (
+CREATE TABLE AVAILABILITY (
                             availability_id BIGINT PRIMARY KEY,
                             person_id BIGINT REFERENCES person NOT NULL,
                             from_date DATE NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `AVAILABILITY` (
 -- --
 -- -- Create for table `COMPETENCE`
 -- --
-CREATE TABLE `COMPETENCE` (
+CREATE TABLE COMPETENCE (
                           competence_id BIGINT PRIMARY KEY,
                           name VARCHAR(255) NOT NULL UNIQUE
 );
@@ -49,7 +49,7 @@ CREATE TABLE `COMPETENCE` (
 -- --
 -- -- Create for table `COMPETENCE_PROFILE`
 -- --
-CREATE TABLE `COMPETENCE_PROFILE` (
+CREATE TABLE COMPETENCE_PROFILE (
                                   competence_profile_id BIGINT PRIMARY KEY,
                                   person_id BIGINT REFERENCES person NOT NULL,
                                   competence_id BIGINT REFERENCES competence NOT NULL,
