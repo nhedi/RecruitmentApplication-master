@@ -4,15 +4,25 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import recruitment.application.RecruiterService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.context.annotation.Bean;
 
 @Configuration
-//@EnableWebSecurity
+@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Override
+    @Autowired
+    RecruiterService userDetailsService;
+
+    @Autowired
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("user1").password("user1").roles("USER");
+        /*auth.inMemoryAuthentication()
+                .withUser("user1").password("{noop}user1").roles("USER");*/
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 
     @Override
@@ -23,13 +33,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/resources/**").permitAll()
                 .antMatchers("/login*").permitAll()
+                .antMatchers("/register*").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                //.usernameParameter("username").passwordParameter("password")
                 //.loginProcessingUrl("/perform_login")
-                .defaultSuccessUrl("/homepage.html", true)
-                /*.failureUrl("/login.html?error=true")
+                .defaultSuccessUrl("/apply", false)
+                /*.failureUrl("/login")
                 .failureHandler(authenticationFailureHandler())
                 .and()
                 .logout()
@@ -38,8 +50,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessHandler(logoutSuccessHandler())*/;
     }
 
-    /*@Bean
-    public PasswordEncoder passwordEncoder() {
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    }*/
+    }
 }
