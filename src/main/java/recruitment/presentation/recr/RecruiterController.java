@@ -71,7 +71,7 @@ public class RecruiterController {
                             registerForm.getSsn(), registerForm.getUsername(), registerForm.getPassword());
 
                 System.out.println("***************************");
-                System.out.println(service.findName(3));
+//                System.out.println(service.findName(3));
                 LoginForm loginForm = new LoginForm();
                 loginForm.setUsername(registerForm.getUsername());
 
